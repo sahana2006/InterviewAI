@@ -17,3 +17,18 @@ class JobCreateView(generics.CreateAPIView):
             serializer.save(hr=request.user)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+from rest_framework import generics
+from .models import Job
+from .serializers import JobSerializer
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from django.utils import timezone
+
+class ValidJobListView(generics.ListAPIView):
+    serializer_class = JobSerializer
+    permission_classes = [IsAuthenticatedOrReadOnly]
+
+    def get_queryset(self):
+        today = timezone.now().date()
+        return Job.objects.filter(deadline__gte=today).order_by('deadline')
