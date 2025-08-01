@@ -30,6 +30,7 @@ urlpatterns = [
     path('interview/', include('interview.urls')),
     path('coding_test/', include('coding_test.urls')),
     path('resumeapp/', include('resumeapp.urls')),
+    path('hrsection/', include('hrsection.urls')),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]

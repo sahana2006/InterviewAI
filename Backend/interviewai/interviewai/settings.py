@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'interview',
     'coding_test',
     'resumeapp',
+    'hrsection'
 ]
 
 MIDDLEWARE = [
