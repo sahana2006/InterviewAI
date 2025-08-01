@@ -26,7 +26,7 @@ const JobPostForm = () => {
     setStatus("Submitting...");
 
     try {
-      const response = await apiClient.get("/api/hr/jobs/create/", formData, {
+      const response = await apiClient.post("/hrsection/create/", formData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -135,12 +135,12 @@ const JobPostForm = () => {
                 />
               </div>
             </div>
-            <button type="submit" className="btn btn-info mt-4">
+            <button type="submit" className="btn btn-info mt-4 text-dark fw-bold">
               Post Job
             </button>
           </form>
         </div>
-        {status && <div className="mt-3 alert alert-info">{status}</div>}
+        {status && <div className="mt-3 alert alert-info text-dark fw-bold">{status}</div>}
       </div>
     </>
   );

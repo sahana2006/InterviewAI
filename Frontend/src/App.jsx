@@ -16,7 +16,7 @@ import CodingDetail from "./Pages/Coding_test/CodingDetail.jsx";
 import HRDashboard from "./Pages/HR_Dashboard.jsx";
 import JobPostForm from "./Pages/HR-Section/PostJobVacancy.jsx";
 import ResumeCoach from "./Pages/ResumeCoach.jsx";
-
+import JobList from "./Pages/Jobs/AvailableJobsCandidate.jsx";
 function App() {
   return (
     <Routes>
@@ -34,6 +34,7 @@ function App() {
       <Route path="/hr-dashboard" element={< HRDashboard/>} />
       <Route path="/hr/post-job" element={< JobPostForm/>} />
       <Route path="/resume" element={< ResumeCoach/>} />
+      <Route path="/available-jobs" element={< JobList/>} />
       {/* Add other routes as needed */}
     </Routes>
   );
