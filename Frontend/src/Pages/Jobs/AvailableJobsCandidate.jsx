@@ -78,7 +78,7 @@ const JobList = () => {
                 </p>
                 <button
                   onClick={() => handleApplyClick(job)}
-                  className="mt-2 bg-info text-white px-4 py-2 rounded"
+                  className="mt-2 bg-info text-dark px-4 py-2 rounded"
                 >
                   Apply
                 </button>

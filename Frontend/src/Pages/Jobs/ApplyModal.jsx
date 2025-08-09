@@ -55,7 +55,7 @@ const ApplyModal = ({ show, onClose, job, onSubmit }) => {
         <div className="modal-content">
           {/* Header */}
           <div className="modal-header">
-            <h5 className="modal-title">
+            <h5 className="modal-title fw-bold text-primary">
               Apply for {job?.title || "this position"}
             </h5>
             <button
@@ -70,7 +70,7 @@ const ApplyModal = ({ show, onClose, job, onSubmit }) => {
             <form onSubmit={handleSubmit}>
               {/* Name */}
               <div className="mb-3">
-                <label className="form-label">Name</label>
+                <label className="form-label fw-bold">Name</label>
                 <input
                   type="text"
                   value={userData.name}
@@ -81,7 +81,7 @@ const ApplyModal = ({ show, onClose, job, onSubmit }) => {
 
               {/* Email */}
               <div className="mb-3">
-                <label className="form-label">Email</label>
+                <label className="form-label fw-bold">Email</label>
                 <input
                   type="email"
                   value={userData.email}
@@ -92,7 +92,7 @@ const ApplyModal = ({ show, onClose, job, onSubmit }) => {
 
               {/* Resume */}
               <div className="mb-3">
-                <label className="form-label">Attach Resume</label>
+                <label className="form-label fw-bold">Attach Resume</label>
                 <input
                   type="file"
                   accept=".pdf,.doc,.docx"
@@ -114,7 +114,7 @@ const ApplyModal = ({ show, onClose, job, onSubmit }) => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="btn btn-primary"
+                  className="btn btn-info"
                 >
                   {loading ? "Submitting..." : "Submit"}
                 </button>
