@@ -24,6 +24,3 @@ This system enables recruiters to efficiently assess candidates using dynamic in
 - Candidates can take quizzes and coding tests
 - System evaluates responses and generates feedback
 - HR can track applications and manage hiring workflows
-
-## License
-MIT License
